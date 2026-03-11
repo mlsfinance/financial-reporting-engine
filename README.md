@@ -1,5 +1,4 @@
 # Financial Data Automation & Reporting Engine
-
 A Python-based CLI pipeline that transforms raw financial data into structured, professional-grade reports — covering portfolio performance, risk metrics, and automated visualizations.
 
 Built as part of a Bachelor's thesis in International Business with a focus on Quantitative Finance.
@@ -123,3 +122,4 @@ See [`config/example.yaml`](config/example.yaml) for a fully annotated template 
 - **Reporting** — ReportLab (PDF), HTML
 - **Config** — PyYAML
 - **CLI** — argparse
+
