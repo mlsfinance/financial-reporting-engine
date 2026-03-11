@@ -1,0 +1,26 @@
+data:
+  source_type: "positions_excel"
+  input_path: "./data/templates/client_positions.xlsx"
+  sheet_name: "positions"
+
+  base_currency: "USD"
+  fx:
+    enabled: true
+    on_missing: "error"
+
+  start_date: "2022-01-01"
+  end_date: null
+  price_column: "Close"
+
+portfolio:
+  return_period_start: "2025-12-01"
+  as_of: null
+
+report:
+  title: "Monthly Portfolio Report"
+  output_dir: "./reports/runs"
+  include_kpis: true
+  include_drawdowns: true
+  include_rolling: true
+  include_histograms: true
+  include_boxplots: true

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-01-13_115053",
+  "config_path": "C:\\Users\\Usuario\\financial_reporting_engine\\config\\monthly_portfolio.yaml",
+  "run_dir": "C:\\Users\\Usuario\\financial_reporting_engine\\reports\\runs\\2026-01-13_115053",
+  "assets": [
+    "AAPL",
+    "BBVA.MC",
+    "GOOGL"
+  ],
+  "base_currency": "USD",
+  "input_file": "C:\\Users\\Usuario\\financial_reporting_engine\\data\\templates\\client_positions.xlsx",
+  "input_file_hash_sha256": "89ab454067f2511bd270b345890c46bc503d48615647fdd53b1417adb1ac8706"
+}

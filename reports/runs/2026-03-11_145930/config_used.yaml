@@ -1,0 +1,68 @@
+#example configuration for financial_reporting_engine. this file is a TEMPLATE and DOCUMENTATION reference
+
+data:
+  #the data source type supports csv, excel and yfinance
+  source_type: "csv"
+
+  #CSV / Excel 
+  input_path: "./data/portfolio.csv"
+  sheet_name: "Prices"          #just for Excel
+
+  #yfinance:
+  ticker: "AAPL"                #for example AAPL, TSLA, GOOGL or BBVA.MC
+  start_date: "2018-01-01"
+  end_date: null
+
+  #common:
+  date_column: "Date"
+  price_column: "Close"
+
+  frequency: "D"                #D / B / W / M
+  timezone: null                #for example "UTC"
+
+
+cleaning:
+  drop_duplicates: true
+  sort_by_date: true
+
+  #NA handling strategies: drop / ffill / bfill / ffill_then_bfill / interpolate
+  na_strategy: "ffill_then_bfill"
+
+  #return calculation: simple / log
+  return_type: "log"
+
+  #alignment across assets: inner / outer
+  align_method: "inner"
+
+  min_rows: 30
+
+
+kpis:
+  #annualization factor: 252 (daily) / 52 (weekly) / 12 (monthly)
+  annualization_factor: 252
+
+  risk_free_rate: 0.0
+
+  #rolling window sizes (in periods)
+  rolling_windows: [21, 63, 126, 252]
+
+
+visuals:
+  dpi: 150
+  figure_format: "png"          #png / jpg / pdf
+
+
+report:
+  title: "Financial Report"
+
+  output_pdf: "./reports/report.pdf"
+  output_html: "./reports/report.html"
+
+  include_kpis: true
+  include_drawdowns: true
+  include_rolling: true
+  include_histograms: true
+  include_boxplots: true
+
+  #executive summary template: standard / minimal
+  executive_summary_template: "standard"

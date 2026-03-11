@@ -1,0 +1,45 @@
+#generic CSV configuration
+
+data:
+  source_type: "csv"
+  input_path: "./data/portfolio.csv"
+
+  date_column: "Date"
+  price_column: "Close"
+
+  frequency: "D"
+  timezone: null
+
+
+cleaning:
+  drop_duplicates: true
+  sort_by_date: true
+  na_strategy: "ffill_then_bfill"   #drop / ffill / bfill / ffill_then_bfill / interpolate
+  return_type: "log"                #simple / log
+  align_method: "inner"             #inner / outer
+  min_rows: 30
+
+
+kpis:
+  annualization_factor: 252
+  risk_free_rate: 0.0
+  rolling_windows: [21, 63, 126, 252]
+
+
+visuals:
+  dpi: 150
+  figure_format: "png"
+
+
+report:
+  title: "CSV Financial Report"
+  output_pdf: "./reports/report.pdf"
+  output_html: "./reports/report.html"
+
+  include_kpis: true
+  include_drawdowns: true
+  include_rolling: true
+  include_histograms: true
+  include_boxplots: true
+
+  executive_summary_template: "standard"

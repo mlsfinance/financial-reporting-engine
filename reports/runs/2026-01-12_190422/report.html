@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Monthly Portfolio Report</title>
+    <style>
+    :root{
+        --text: #111;
+        --muted: #555;
+        --border: #c8c8c8;
+        --header-bg: #f0f0f0;
+        --label-bg: #f5f5f5;
+        --card-bg: #fafafa;
+    }
+
+    body{
+        font-family: Arial, sans-serif;
+        color: var(--text);
+        margin: 28px auto;
+        line-height: 1.45;
+        max-width: 1000px;
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 26px;
+        margin: 0 0 6px 0;
+    }
+
+    h2{
+        font-size: 18px;
+        margin: 22px 0 10px 0;
+    }
+
+    h3{
+        font-size: 15px;
+        margin: 16px 0 10px 0;
+    }
+
+    .meta{
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 14px;
+    }
+
+    .section{
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+
+    table{
+        border-collapse: collapse;
+        border: 1px solid var(--border);
+    }
+
+    th, td{
+        border: 1px solid var(--border);
+        padding: 6px 8px;
+    }
+
+
+    .kpi-table, .attrib-table{
+        width: 80%;
+        margin: 10px auto 18px auto;
+        background: #fff;
+    }
+
+    .kpi-table th, .attrib-table th{
+        background: var(--header-bg);
+        font-weight: 600;
+        text-align: right;
+    }
+
+    .kpi-table th:first-child,
+    .kpi-table td:first-child,
+    .attrib-table th:first-child,
+    .attrib-table td:first-child{
+        text-align: left;
+    }
+
+    .headline-table-2col{
+        width: 720px;
+        max-width: 100%;
+        margin: 12px auto 10px auto;
+        background: var(--card-bg);
+    }
+
+    .headline-table-2col td.label{
+        width: 55%;
+        font-weight: 600;
+        background: var(--label-bg);
+    }
+
+    .headline-table-2col td.value{
+        width: 45%;
+        text-align: right;
+        background: #fff;
+    }
+
+    .drivers{
+        max-width: 900px;
+        margin: 6px auto 0 auto;
+    }
+
+    .drivers li{
+        margin: 6px 0;
+    }
+
+    
+    .figure-block{
+        margin: 34px 0;
+    }
+
+    .figure-block h3{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0 0 12px 0;
+    }
+
+    .figure-block img{
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid var(--border);
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Monthly Portfolio Report</h1>
+    <div class="meta">Generated on 2026-01-12 at 19:04:27</div>
+    <div class="section">
+        <h2>Executive Summary</h2>
+        <p>This report summarizes the recent performance and risk profile of the analyzed asset(s). These metrics should be interpreted in the context of the investor's risk tolerance, investment horizon, and diversification objectives.</p>
+        
+    <table class="headline-table-2col">
+        <tr><td class="label">Period return</td><td class="value">1.29%</td></tr>
+        <tr><td class="label">YTD</td><td class="value">0.87%</td></tr>
+        <tr><td class="label">Annualized vol</td><td class="value">19.09%</td></tr>
+        <tr><td class="label">Max drawdown</td><td class="value">-31.18%</td></tr>
+    </table>
+
+    <ul class="drivers">
+        <li>Top contributors: BBVA.MC, GOOGL, AAPL. Main detractors: AAPL, GOOGL, BBVA.MC.</li>
+        <li>Performance dispersion: 'BBVA.MC' led the period, while 'AAPL' lagged.</li>
+        <li>Volatility eased recently (short window 21 ≤ long window 252).</li>
+    </ul>
+    
+    </div>
+    <div class="section">
+        <h2>Attribution</h2>
+        <h3>Top contributors</h3>
+<table class='attrib-table'>
+<tr><th>Asset</th><th>Weight</th><th>Return</th><th>Contribution</th></tr>
+<tr><td>BBVA.MC</td><td>25.00%</td><td>330.38%</td><td>82.59%</td></tr>
+<tr><td>GOOGL</td><td>35.00%</td><td>85.58%</td><td>29.95%</td></tr>
+<tr><td>AAPL</td><td>40.00%</td><td>24.72%</td><td>9.89%</td></tr>
+</table>
+<h3>Bottom detractors</h3>
+<table class='attrib-table'>
+<tr><th>Asset</th><th>Weight</th><th>Return</th><th>Contribution</th></tr>
+<tr><td>AAPL</td><td>40.00%</td><td>24.72%</td><td>9.89%</td></tr>
+<tr><td>GOOGL</td><td>35.00%</td><td>85.58%</td><td>29.95%</td></tr>
+<tr><td>BBVA.MC</td><td>25.00%</td><td>330.38%</td><td>82.59%</td></tr>
+</table>
+    </div>
+    <div class="section">
+        <h2>Key Performance Indicators</h2>
+        <table class="dataframe kpi-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Asset</th>
+      <th>CAGR (%)</th>
+      <th>Ann.Vol (%)</th>
+      <th>Sharpe Ratio</th>
+      <th>Sortino Ratio</th>
+      <th>Max.Drawdown (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AAPL</td>
+      <td>6.98</td>
+      <td>23.48</td>
+      <td>0.28</td>
+      <td>0.44</td>
+      <td>-33.36</td>
+    </tr>
+    <tr>
+      <td>BBVA.MC</td>
+      <td>32.48</td>
+      <td>26.07</td>
+      <td>1.09</td>
+      <td>1.68</td>
+      <td>-39.33</td>
+    </tr>
+    <tr>
+      <td>GOOGL</td>
+      <td>15.38</td>
+      <td>26.96</td>
+      <td>0.53</td>
+      <td>0.83</td>
+      <td>-43.63</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    <div class="section">
+        <h2>Figures</h2>
+        <div class="figure-block"><h3>Price Chart</h3><img src="figures\prices.png" alt="Price Chart"></div>
+<div class="figure-block"><h3>Drawdown Chart</h3><img src="figures\drawdowns.png" alt="Drawdown Chart"></div>
+<div class="figure-block"><h3>Rolling Cumulative Return (window=21)</h3><img src="figures\rolling_return_21.png" alt="Rolling Cumulative Return (window=21)"></div>
+<div class="figure-block"><h3>Rolling Cumulative Return (window=63)</h3><img src="figures\rolling_return_63.png" alt="Rolling Cumulative Return (window=63)"></div>
+<div class="figure-block"><h3>Rolling Cumulative Return (window=126)</h3><img src="figures\rolling_return_126.png" alt="Rolling Cumulative Return (window=126)"></div>
+<div class="figure-block"><h3>Rolling Cumulative Return (window=252)</h3><img src="figures\rolling_return_252.png" alt="Rolling Cumulative Return (window=252)"></div>
+<div class="figure-block"><h3>Rolling Volatility (window=21)</h3><img src="figures\rolling_vol_21.png" alt="Rolling Volatility (window=21)"></div>
+<div class="figure-block"><h3>Rolling Volatility (window=63)</h3><img src="figures\rolling_vol_63.png" alt="Rolling Volatility (window=63)"></div>
+<div class="figure-block"><h3>Rolling Volatility (window=126)</h3><img src="figures\rolling_vol_126.png" alt="Rolling Volatility (window=126)"></div>
+<div class="figure-block"><h3>Rolling Volatility (window=252)</h3><img src="figures\rolling_vol_252.png" alt="Rolling Volatility (window=252)"></div>
+<div class="figure-block"><h3>Return Distribution: AAPL</h3><img src="figures\hist_AAPL.png" alt="Return Distribution: AAPL"></div>
+<div class="figure-block"><h3>Return Distribution: BBVA.MC</h3><img src="figures\hist_BBVA_MC.png" alt="Return Distribution: BBVA.MC"></div>
+<div class="figure-block"><h3>Return Distribution: GOOGL</h3><img src="figures\hist_GOOGL.png" alt="Return Distribution: GOOGL"></div>
+<div class="figure-block"><h3>Return Boxplot</h3><img src="figures\boxplot.png" alt="Return Boxplot"></div>
+    </div>
+</body>
+</html>
