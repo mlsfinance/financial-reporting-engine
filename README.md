@@ -1,7 +1,6 @@
 # Financial Data Automation & Reporting Engine
-A Python-based CLI pipeline that transforms raw financial data into structured, professional-grade reports — covering portfolio performance, risk metrics, and automated visualizations.
 
-Built as part of a Bachelor's thesis in International Business with a focus on Quantitative Finance.
+Python pipeline that takes raw financial data and outputs structured PDF and HTML reports: portfolio performance, risk metrics, and visualizations, all from a single CLI command.
 
 ---
 
@@ -10,10 +9,10 @@ Built as part of a Bachelor's thesis in International Business with a focus on Q
 Given a YAML configuration file, the engine:
 
 1. **Loads** price data from CSV, Excel, or Yahoo Finance (via `yfinance`)
-2. **Cleans & normalizes** the data — handles missing values, duplicates, timezone alignment, and resampling
-3. **Computes KPIs** — CAGR, annualized volatility, Sharpe ratio, Sortino ratio, max drawdown, rolling metrics
-4. **Runs attribution analysis** — contribution per asset weighted by portfolio position
-5. **Generates visualizations** — price charts, drawdown charts, rolling return/volatility charts, return distributions, boxplots
+2. **Cleans & normalizes** the data: missing values, duplicates, timezone alignment, and resampling
+3. **Computes KPIs**: CAGR, annualized volatility, Sharpe ratio, Sortino ratio, max drawdown, rolling metrics
+4. **Runs attribution analysis**: contribution per asset weighted by portfolio position
+5. **Generates visualizations**: price charts, drawdown charts, rolling return/volatility charts, return distributions, boxplots
 6. **Outputs a report** in both **PDF and HTML** with an executive summary, KPI tables, and all figures
 
 Each run is fully reproducible: the used config and a SHA-256 hash of the input file are saved alongside the report.
@@ -57,7 +56,7 @@ pip install -r requirements.txt
 
 ### 2. Configure your run
 
-Edit one of the provided YAML presets in `config/`, or use `config/example.yaml` as a reference — it documents every available option.
+Edit one of the provided YAML presets in `config/`, or use `config/example.yaml` as a reference, it documents every available option.
 
 **Example: pull data from Yahoo Finance**
 ```yaml
@@ -117,9 +116,10 @@ See [`config/example.yaml`](config/example.yaml) for a fully annotated template 
 
 ## Tech stack
 
-- **Python** — Pandas, NumPy, Matplotlib
-- **Data sources** — CSV, Excel (`openpyxl`), Yahoo Finance (`yfinance`)
-- **Reporting** — ReportLab (PDF), HTML
-- **Config** — PyYAML
-- **CLI** — argparse
+- **Python**: Pandas, NumPy, Matplotlib
+- **Data sources**: CSV, Excel (`openpyxl`), Yahoo Finance (`yfinance`)
+- **Reporting**: ReportLab (PDF), HTML
+- **Config**: PyYAML
+- **CLI**: argparse
+
 
