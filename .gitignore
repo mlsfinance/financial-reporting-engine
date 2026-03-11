@@ -1,0 +1,33 @@
+ # Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Generated reports
+reports/
+
+# Data files
+data/
+*.csv
+*.xlsx
+*.xls
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets / environment
+.env
+*.key
